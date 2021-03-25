@@ -101,3 +101,49 @@ var mentors = [
 
 //YOUR CODE HERE
 
+mentors.forEach(m => {
+ //step 1
+if (m.job.city === "Barcelona" && m.skills.includes("React")){
+  console.log(`Hi, my name is ${m.firstName} ${m.lastName}. I work in Barcelona and i know React.`)
+}
+//step 2
+if (m.job.city === "Barcelona"){
+  m.class ="Jun1"
+  m.skills.push("SQL")
+}
+//step 3
+m.addSkill = function(skill) {
+  this.skills.push(skill)
+  }
+// step 7
+m.addStudentLikes = function(){
+  this.studentLikes ++;
+}
+})
+//step 4
+function addSkill(mentors,newSkill){
+  mentors.forEach(m => m.skills.push(newSkill));
+}
+// step 5
+function removeSkill(mentors,newSkill){
+  mentors.forEach(m => {
+    m.skills = m.skills.filter(s => s !== newSkill)
+  })
+}
+
+//step 6
+function mentorWithMoreSkills(mentors) {
+  let mentorsName = "";
+  let numbersOfSkills = 0;
+  mentors.forEach(m => {
+    if (m.skills.length > numbersOfSkills){
+    numbersOfSkills = m.skills.length;
+    mentorsName = m.firstName + " " + m.lastName;
+    }
+  });
+  return mentorsName;
+}
+// step 8
+function addStudentLikes (mentors){
+  mentors.forEach(m => studentLikes ++);
+}

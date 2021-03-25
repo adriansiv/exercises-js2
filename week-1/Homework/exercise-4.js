@@ -59,13 +59,18 @@ let restaurant1 = {
     applicationVersion: "1.0",
     restaurants: restaurants,
     findAvailableRestaurants: function (numberOfPeople) {
-      // Complete here
+      return this.restaurants
+        .filter(restaurants => (restaurants.totalSeats - restaurants.numberOfCustomers) >= numberOfPeople)
+        .map(restaurants => restaurants.name);
     },
     findRestaurantServingDish: function (dishName) {
-      // Complete here
+      return this.restaurants
+        .filter(restaurant => restaurant.menu.includes(dishName))
+        .map(restaurant => restaurant.name);
     },
     countNumberOfRestaurantsInArea: function (area) {
-      // Complete here
+      return this.restaurants.filter(restaurant => restaurant.address.area === area)
+      .length;
     },
   };
   
@@ -93,3 +98,7 @@ let restaurant1 = {
   console.log(
     `Number of restaurants in city centre: Expected result: 2, actual result: ${numberOfRestaurantsInCityCentre}`
   );
+
+
+
+
