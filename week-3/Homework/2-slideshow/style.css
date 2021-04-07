@@ -1,1 +1,38 @@
 /** Write your CSS in here **/
+body {
+    background-color: rgb(63, 63, 77);
+}
+
+h1 {
+    text-align: center;
+    margin-top: 8%;
+}
+
+img {
+    width: 500px;
+    margin-left: 30%;
+    margin-top: 1em;
+    border-radius: 5px;
+    border: solid rgba(151, 151, 182, 0.486);
+    padding: 1%;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+button {
+    background-color: rgba(151, 151, 182, 0.342);
+    border: rgba(151, 151, 182, 0.342);
+    border-radius: 5px;
+    margin: 2% 1% 1% 1%;
+    padding: 2%;
+    color: grey;
+}
+
+button:hover {
+    background-color: rgba(151, 151, 182, 0.767);
+    color: black;
+}
